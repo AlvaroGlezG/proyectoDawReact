@@ -22,7 +22,7 @@ export default function Header(){
 
             <div className="movie-card">
                 <div className="container">
-                    <a href="#"><Poster poster={film.Poster}/></a>
+                    <a href="/"><Poster poster={film.Poster}/></a>
                     <div className="hero">
                         <div className="details">
                             <div className="title1">The Hobbit <span>PG-13</span></div>
