@@ -3,15 +3,15 @@ import Loading from 'components/Loading/loading';
 import { usePosters } from 'hooks/usePosters'; 
 
 import './movie_card.css'
+import TitleAndOthers from 'components/TitleAndOthers/titleAndOthers';
+import Plot from 'components/Plot/plot';
 
 export default function Header(){
     const {film, loading} = usePosters();
     if((loading) || (film === undefined)){
         return <Loading />;
     }else{
-        // const poster = film.Poster;
-        // console.log(poster);
-
+        console.log(film)
         return (<>
             {/* <!--BOOTSTRAP--> */}
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossOrigin="anonymous"/>
@@ -22,30 +22,15 @@ export default function Header(){
 
             <div className="movie-card">
                 <div className="container">
-                    <a href="/"><Poster poster={film.Poster}/></a>
-                    <div className="hero">
-                        <div className="details">
-                            <div className="title1">The Hobbit <span>PG-13</span></div>
-                            <span className="likes">109 likes</span>
-                        </div>
-                        {/* <!-- end details --> */}
-                    </div>
-                    {/* <!-- end hero --> */}
-                    <div className="description">
-                        <div className="column">
-                            <p>Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining a company of thirteen dwarves led
-                                by the legendary warrior, Thorin Oakenshield. Their journey will take them into the Wild; through.Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Approached out of
-                            </p>
-                        </div>
-                        {/* <!-- end column --> */}
-                    </div>
-                    {/* <!-- end description --> */}
+                    <Poster poster={film.Poster}/>
+                    <TitleAndOthers title={film.Title} rated={film.Rated} imdbRating={film.imdbRating}/>
+                    <Plot plot={film.Plot}/>
                 </div>
                 {/* <!-- end container --> */}
             </div>
             {/* <!-- end movie-card --> */}
             {/* <!-- partial --> */}
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            {/* <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> */}
         </>);
     }
 }

@@ -1,0 +1,24 @@
+.formularios {
+    position: relative;
+}
+
+.opiniones {
+    padding: 100px 300px 100px 300px;
+    color: black;
+}
+
+.opiniones {
+    filter: blur(10px);
+}
+
+form div label {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+}
+
+form p {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+}

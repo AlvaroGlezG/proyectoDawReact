@@ -1,0 +1,350 @@
+.frame {
+    width: 100%;
+    height: auto;
+    /*background-color: #000000;*/
+    overflow: hidden;
+    color: #fff;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.lock {
+    box-sizing: border-box;
+    position: relative;
+    height: 240px;
+    width: 160px;
+    padding-top: 80px;
+    cursor: pointer;
+}
+
+.lock:hover .clock_face {
+    animation: rotateClock 3s linear infinite;
+}
+
+.hanger {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 20px;
+    top: 0;
+    border-radius: 60px 60px 0 0;
+    background: lightgray;
+    box-shadow: inset 4px 4px 1px 0 rgba(255, 255, 255, 0.8), inset -3px -2px 1px 0 rgba(0, 0, 0, 0.3), 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hanger .inside {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0);
+    ;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 4px 4px 1px 0 rgba(255, 255, 255, 0.8), -3px -2px 1px 0 rgba(0, 0, 0, 0.3), inset 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.base {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    background-color: lightgray;
+    border-radius: 50%;
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 1px 0 rgba(255, 255, 255, 0.8), inset -1px -2px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.clock_face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 5px;
+    left: 5px;
+    background: #333;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+.line {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: #ccc;
+    top: 70px;
+    left: 74px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 14px;
+}
+
+.line:nth-child(5n+1) {
+    width: 2px;
+    height: 18px;
+    top: 66px;
+    left: 74px;
+    background: #fff;
+}
+
+.line:nth-child(1):after {
+    content: "0";
+    position: absolute;
+    top: 22px;
+    left: -2px;
+}
+
+.line:nth-child(6):after {
+    content: "5";
+    position: absolute;
+    top: 22px;
+    left: -2px;
+}
+
+.line:nth-child(11):after {
+    content: "10";
+    position: absolute;
+    top: 22px;
+    left: -6.5px;
+}
+
+.line:nth-child(16):after {
+    content: "15";
+    position: absolute;
+    top: 22px;
+    left: -6.5px;
+}
+
+.line:nth-child(21):after {
+    content: "20";
+    position: absolute;
+    top: 22px;
+    left: -6.5px;
+}
+
+.line:nth-child(26):after {
+    content: "25";
+    position: absolute;
+    top: 22px;
+    left: -6.5px;
+}
+
+.line:nth-child(31):after {
+    content: "30";
+    position: absolute;
+    top: 22px;
+    left: -6.5px;
+}
+
+.line:nth-child(36):after {
+    content: "35";
+    position: absolute;
+    top: 22px;
+    left: -6.5px;
+}
+
+.knob {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 55px;
+    left: 55px;
+    background: #E7ECF0;
+    border-radius: 50%;
+    box-shadow: inset 2px 4px 1px 0 rgba(255, 255, 255, 0.8), inset -1px -2px 1px 0 rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.line-1 {
+    transform: rotate(0) translateY(-64px);
+}
+
+.line-1:nth-child(5n+1) {
+    transform: rotate(0) translateY(-60px);
+}
+
+.line-2 {
+    transform: rotate(9deg) translateY(-64px);
+}
+
+.line-3 {
+    transform: rotate(18deg) translateY(-64px);
+}
+
+.line-4 {
+    transform: rotate(27deg) translateY(-64px);
+}
+
+.line-5 {
+    transform: rotate(36deg) translateY(-64px);
+}
+
+.line-6 {
+    transform: rotate(45deg) translateY(-60px);
+}
+
+.line-7 {
+    transform: rotate(54deg) translateY(-64px);
+}
+
+.line-8 {
+    transform: rotate(63deg) translateY(-64px);
+}
+
+.line-9 {
+    transform: rotate(72deg) translateY(-64px);
+}
+
+.line-10 {
+    transform: rotate(81deg) translateY(-64px);
+}
+
+.line-11 {
+    transform: rotate(90deg) translateY(-60px);
+}
+
+.line-12 {
+    transform: rotate(99deg) translateY(-64px);
+}
+
+.line-13 {
+    transform: rotate(108deg) translateY(-64px);
+}
+
+.line-14 {
+    transform: rotate(117deg) translateY(-64px);
+}
+
+.line-15 {
+    transform: rotate(126deg) translateY(-64px);
+}
+
+.line-16 {
+    transform: rotate(135deg) translateY(-60px);
+}
+
+.line-17 {
+    transform: rotate(144deg) translateY(-64px);
+}
+
+.line-18 {
+    transform: rotate(153deg) translateY(-64px);
+}
+
+.line-19 {
+    transform: rotate(162deg) translateY(-64px);
+}
+
+.line-20 {
+    transform: rotate(171deg) translateY(-64px);
+}
+
+.line-21 {
+    transform: rotate(180deg) translateY(-60px);
+}
+
+.line-22 {
+    transform: rotate(189deg) translateY(-64px);
+}
+
+.line-23 {
+    transform: rotate(198deg) translateY(-64px);
+}
+
+.line-24 {
+    transform: rotate(207deg) translateY(-64px);
+}
+
+.line-25 {
+    transform: rotate(216deg) translateY(-64px);
+}
+
+.line-26 {
+    transform: rotate(225deg) translateY(-60px);
+}
+
+.line-27 {
+    transform: rotate(234deg) translateY(-64px);
+}
+
+.line-28 {
+    transform: rotate(243deg) translateY(-64px);
+}
+
+.line-29 {
+    transform: rotate(252deg) translateY(-64px);
+}
+
+.line-30 {
+    transform: rotate(261deg) translateY(-64px);
+}
+
+.line-31 {
+    transform: rotate(270deg) translateY(-60px);
+}
+
+.line-32 {
+    transform: rotate(279deg) translateY(-64px);
+}
+
+.line-33 {
+    transform: rotate(288deg) translateY(-64px);
+}
+
+.line-34 {
+    transform: rotate(297deg) translateY(-64px);
+}
+
+.line-35 {
+    transform: rotate(306deg) translateY(-64px);
+}
+
+.line-36 {
+    transform: rotate(315deg) translateY(-60px);
+}
+
+.line-37 {
+    transform: rotate(324deg) translateY(-64px);
+}
+
+.line-38 {
+    transform: rotate(333deg) translateY(-64px);
+}
+
+.line-39 {
+    transform: rotate(342deg) translateY(-64px);
+}
+
+.line-40 {
+    transform: rotate(351deg) translateY(-64px);
+}
+
+@keyframes rotateClock {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    20% {
+        transform: rotate(-20deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(5deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(-70deg) translate3d(0, 0, 0);
+    }
+    90% {
+        transform: rotate(-50deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(-360deg) translate3d(0, 0, 0);
+    }
+}
