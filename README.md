@@ -12,6 +12,10 @@ GitHub y GitHub Desktop
 
 # BIBLIOGRAFÍA
 
+https://www.faztweb.com/
+https://www.w3schools.com/
+https://www.php.net/docs.php
+https://codepen.io/
 https://fontstruct.com/
 http://www.omdbapi.com/
 https://developer.mozilla.org/
