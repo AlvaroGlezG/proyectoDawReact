@@ -30,7 +30,7 @@ export default function OpinionForm() {
                     <input type="text" className="form-control" name="titulo" id="titulo" placeholder="Titulo" disabled />
                 </div>
                 <div className="form-group">
-                    <label for="resena">Reseña</label>
+                    <label htmlFor="resena">Reseña</label>
                     <textarea id="resena" name="resena" rows="10" cols="100" className="form-control"
                         placeholder="Escribe aquí tu reseña..." disabled></textarea>
                 </div>

@@ -23,7 +23,7 @@ export default function Header(){
     if((loading) || (film === undefined)){
         return <Loading />;
     }else{
-        console.log(film)
+        // console.log(film)
         return (<>
             <Link to="/login">
                 <img className="login" alt="imagen de login" src="https://img.icons8.com/pastel-glyph/64/ffffff/login-rounded-right.png"/>
