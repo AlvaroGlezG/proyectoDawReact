@@ -15,7 +15,8 @@ import Plot from 'components/Plot/plot';
 
 import { usePosters } from 'hooks/usePosters'; 
 
-import './movie_card.css'
+import './movie_card.css';
+import './loginText.css';
 
 export default function Header(){
     const {film, loading} = usePosters();
@@ -24,7 +25,9 @@ export default function Header(){
     }else{
         console.log(film)
         return (<>
-            <Link to="">
+            <Link to="/login">
+                <img className="login" alt="imagen de login" src="https://img.icons8.com/pastel-glyph/64/ffffff/login-rounded-right.png"/>
+                <h4 className="loginText">LogIn</h4>
             </Link>
             <div className="movie-card">
                 <div className="container">
@@ -36,4 +39,3 @@ export default function Header(){
         </>);
     }
 }
-{/* <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> */}
