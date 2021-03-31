@@ -6,22 +6,33 @@
 // ╚█████╔╝██║░░░░░██║██║░╚███║██║╚█████╔╝██║░╚███║  ██║░░░░░╚█████╔╝██║░░██║██║░╚═╝░██║
 // ░╚════╝░╚═╝░░░░░╚═╝╚═╝░░╚══╝╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝
 
+import { useEffect, useState } from 'react';
 import './form.css';
-
-function HabilitaEstrellas(){
-    let stars = false;
-
-    if (stars === false) {
-        stars = true;
-        // console.log(stars);
-        return (import('./stars.css'));
-    } else {
-        stars = false;
-        return (import('./stars_locked.css'));
-    }
-}
+import './stars.css';
+// import './stars_locked.css';
 
 export default function OpinionForm() {
+    const [active, setActive] = useState();
+
+    useEffect(() => {
+        let styles = document.querySelectorAll('style');
+        let styles_lenght = styles.length;
+        if(active === true){
+            console.log('----APPEND / TRUE----')
+            styles[styles_lenght - 1].innerHTML = import('./stars_locked.css')
+            // append(import('./stars_locked.css'))
+        }
+        if(active === false){
+            console.log('----REMOVE / FALSE----')
+            styles[styles_lenght - 1].remove();
+        }
+        console.log(styles)
+        console.log("----------------------")
+        },[active]);
+
+    function HabilitaEstrellas(){
+        setActive(!active);
+    }
     return (<>
         <div id="formulario">
             <form className="opiniones">
