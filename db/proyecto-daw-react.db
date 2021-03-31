@@ -1,0 +1,9 @@
+create database proyecto_daw_react;
+
+create table users(
+    id_user SERIAL NOT NULL,
+    user_name varchar(255),
+    first_name varchar(255),
+    age int,
+    PRIMARY KEY (id_user)
+);
