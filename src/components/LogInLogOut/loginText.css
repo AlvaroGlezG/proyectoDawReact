@@ -1,15 +1,23 @@
 .login{
     position: absolute;
     right: 0;
-    margin-right: 20px;
+    margin-right: 1.9%;
     margin-top: 20px;
 }
 
 .loginText{
     position: absolute;
     right: 0;
-    margin-right: 2.3%;
+    margin-right: 1.9%;
     margin-top: 90px;
     font-size: 16px;
     color: white;
 }
+
+/* .logout{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+
+} */

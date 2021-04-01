@@ -10,10 +10,13 @@ CREATE TABLE users(
 
 -- DROP TABLE users;
 
+ALTER TABLE users ADD COLUMN nick_name VARCHAR(255) UNIQUE;
 ALTER TABLE users ADD user_type VARCHAR(255) DEFAULT 'user';
 ALTER TABLE users DROP COLUMN age;
 ALTER TABLE users ADD COLUMN birth DATE;
 ALTER TABLE users ADD COLUMN email VARCHAR(255);
+ALTER TABLE users ADD COLUMN password text;
+
 
 CREATE TABLE opinions(
     id_opinion SERIAL NOT NULL,
@@ -21,14 +24,57 @@ CREATE TABLE opinions(
     id_film varchar(255),
     title varchar(255),
     opinion TEXT,
-    rating int,
+    rating decimal,
     PRIMARY KEY (id_opinion),
     CONSTRAINT fk_user FOREIGN KEY (id_user_opinion) REFERENCES users (id_user)
 );
 
 -- DROP TABLE opinions;
 
+-- USUARIOS PRUEBA
 INSERT INTO users (user_name, first_name, birth, user_type)
     VALUES ('Álvaro', 'González', '2001-07-09', 'admin');
+UPDATE users SET nick_name = 'AlvaroGlez' WHERE id_user = 1;
+UPDATE users SET password = md5('1qazxsw2') WHERE id_user = 1;
+
+
 INSERT INTO users (user_name, first_name, birth, email)
     VALUES ('David', 'González', '1995-10-14', 'ejemplo@ejemplo.com');
+UPDATE users SET nick_name = 'DavidGlez' WHERE id_user = 2;
+UPDATE users SET password = md5('1234') WHERE id_user = 2;
+
+
+INSERT INTO users (user_name, first_name, birth, email, password)
+    VALUES ('Inma', 'Garcia', '1966-02-04', 'inma@ejemplo.com', md5('1234'));
+UPDATE users SET nick_name = 'InmaGH' WHERE id_user = 3;
+
+
+-- RESEÑAS PRUEBA
+INSERT INTO opinions (id_user_opinion, id_film, title, opinion, rating)
+    VALUES (1, 
+    'tt7286456',
+    'Una peliculas en el momento exacto',
+    'La lucha por la hegemonía en la forma y el discurso de la superhero movie, se ha reducido, desde que éste es el subgénero de referencia en el cine-espectáculo, a una guerra librada prácticamente por dos bandos. De momento, y a juzgar por los resultados en taquilla, el partido lo va ganando, por goleada, la trinchera de la Disney/Marvel. De esa omnipotente factoría cuya meticulosidad en la planificación del calendario de producción, debería estudiarse, durante muchas décadas, en todas las escuelas de marketing del mundo. De esos genios en captar y alimentar el espíritu de nuestros tiempos; poseedores, por lo visto, de la fórmula infalible en la preparación de un blockbuster.',
+    8.5
+    );
+
+INSERT INTO opinions (id_user_opinion, id_film, title, opinion, rating)
+    VALUES (2, 
+    'tt0848228',
+    '¡Vengadores, reúnanse!',
+    'La trama gira entorno a los inhumanos y al increíble personaje que es Kamala Khan, sin embargo, eventualmente podrás controlar a cada uno de los superhéroes que desbloquearás en la campaña y, por increíble que suene, cada uno es totalmente diferente a los demás. Crystal Dynamics ha realizado un excelente trabajo diseñando el estilo de combate de cada uno de los personajes, ya que desde el primer momento que los usas es notable y maravilloso sentir tanta diversidad de lucha en un solo juego. La capacidad de vuelo de Iron Man, el combate mortal cuerpo a cuerpo de Black Widow, el poder destructivo y peso de Hulk, el ingenio de Ms. Marvel, el poder de un dios en Thor y la fortaleza del Capitán América son elementos que permiten que el juego tenga mayor rejugabilidad debido a que cada personaje es único y divertido.',
+    8.7
+);
+
+INSERT INTO opinions (id_user_opinion, id_film, title, opinion, rating)
+    VALUES (3, 
+    'tt2250912',
+    'Marvel lo ha bordado: Spider-Man: Homecoming es la mejor película del trepamuros hasta ahora',
+    'Algunos quizá hayáis reaccionado con incredulidad ante esa afirmación, ya que a veces se suele abusar del concepto definitivo para intentar dar más fuerza a una simple opinión personal. Es obvio que en este caso algo hay de eso, pero también que es solamente la segunda vez que me atrevo a decirlo de una adaptación -la anterior fue con la estupenda ‘Mortadelo y Filemón contra Jimmy el cachondo’-, ya que ‘Spider-Man: Homecoming’ me da exactamente lo que siempre había querido de una aventura en el cine del trepamuros. A partir de ahí se puede ir a más, pero siempre siguiendo esta misma línea.
+    Por lo pronto, es de agradecer que Marvel haya optado por obviar una película de presentación al uso, prescindiendo de ese toque trágico asociado a la pérdida del Tío Ben -lo siento, pero no hacía falta volver a verlo y todos iban a quejarse en caso de volver sobre lo mismo- para optar por mostrarnos cómo un chaval que simplemente quiere usar sus poderes para ayudar a los demás se convierte en un auténtico superhéroe. ',
+    9.5
+);
+
+-- SELECT opinions.opinion FROM opinions, users WHERE opinions.id_user_opinion = users.id_user AND users.id_user = 6;
+
+-- SELECT user_name FROM users WHERE id_user = 9;

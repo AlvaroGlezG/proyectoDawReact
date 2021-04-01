@@ -6,33 +6,46 @@
 // ╚█████╔╝██║░░░░░██║██║░╚███║██║╚█████╔╝██║░╚███║  ██║░░░░░╚█████╔╝██║░░██║██║░╚═╝░██║
 // ░╚════╝░╚═╝░░░░░╚═╝╚═╝░░╚══╝╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░░░░░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝
 
-import { useEffect, useState } from 'react';
+// import { useState } from 'react';
 import './form.css';
 import './stars.css';
 // import './stars_locked.css';
 
 export default function OpinionForm() {
-    const [active, setActive] = useState();
-
-    useEffect(() => {
-        let styles = document.querySelectorAll('style');
-        let styles_lenght = styles.length;
-        if(active === true){
-            console.log('----APPEND / TRUE----')
-            styles[styles_lenght - 1].innerHTML = import('./stars_locked.css')
-            // append(import('./stars_locked.css'))
-        }
-        if(active === false){
-            console.log('----REMOVE / FALSE----')
-            styles[styles_lenght - 1].remove();
-        }
-        console.log(styles)
-        console.log("----------------------")
-        },[active]);
-
+    // const [active, setActive] = useState(false);
+    
     function HabilitaEstrellas(){
-        setActive(!active);
+        // let head = document.querySelector('head');
+        // if(active === true){
+        //     let styles = document.querySelectorAll('style');
+        //     // styles[styles.length - 1].remove();
+        //     head.removeChild(styles[styles.length - 1]);
+        //     setActive(false);
+        // }
+        // if(active === false){
+        //     let form = document.querySelector('.form');
+        //     head.appendChild = (import('./stars_locked.css'));
+        //     setActive(true)
+        // }
+            
+        // form.remove(form.lastChild)
+
+        // let styles_length = styles.length;
+        // setActive(!active);
+        // console.log(active);
+        // if(active === true){
+        //     console.log('----APPEND / TRUE----')
+        //     styles[styles_length - 1].append(import('./stars_locked.css'))
+        //     console.log(document.querySelectorAll('style'));
+        //     // innerHTML = import('./stars_locked.css')
+        // }
+        // if(active === false){
+        //     console.log('----REMOVE / FALSE----')
+        //     styles[11].remove();
+        //     console.log(document.querySelectorAll('style'));
+        // }
     }
+
     return (<>
         <div id="formulario">
             <form className="opiniones">

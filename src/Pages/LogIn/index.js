@@ -5,12 +5,24 @@
 // ███████╗╚█████╔╝╚██████╔╝██║██║░╚███║
 // ╚══════╝░╚════╝░░╚═════╝░╚═╝╚═╝░░╚══╝
 
+import { useState } from 'react';
 import { Link } from 'wouter';
 
 import "./style.css";
 
 export default function LogIn() {
-  import("./script");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmitLogIn = (e) => {
+    e.preventDefault();
+  }
+
+  const handleSubmitRegister = (e) => {
+    e.preventDefault();
+  }
+  
+  import("./script")
   return (
     <>
       <link
@@ -19,7 +31,7 @@ export default function LogIn() {
       />
       <section className="user">
         <Link to="/" >
-          <img src="https://img.icons8.com/metro/52/ffffff/back.png" alt="<" className="backArrow"/>
+          <img src="https://img.icons8.com/metro/52/ffffff/back.png" alt="<" className="backArrow" />
         </Link>
         <div className="user_options-container">
           <div className="user_options-text">
@@ -46,16 +58,17 @@ export default function LogIn() {
               </button>
             </div>
           </div>
-
+          {/* ------------------------- COMIENZA FORMULARIOS ------------------------- */}
           <div className="user_options-forms" id="user_options-forms">
+            {/* ------------------------- LOGIN ------------------------- */}
             <div className="user_forms-login">
               <h2 className="forms_title">Entrar</h2>
-              <form className="forms_form">
+              <form className="forms_form" onSubmit={handleSubmitLogIn}>
                 <fieldset className="forms_fieldset">
                   <div className="forms_field">
                     <input
-                      type="email"
-                      placeholder="Email"
+                      type="text"
+                      placeholder="Usuario/Nickname"
                       className="forms_field-input"
                       required
                       autoFocus
@@ -82,14 +95,40 @@ export default function LogIn() {
                 </div>
               </form>
             </div>
+            {/* ------------------------- FIN LOGIN ------------------------- */}
+            {/* ------------------------- REGISTER ------------------------- */}
             <div className="user_forms-signup">
               <h2 className="forms_title">Registrar</h2>
-              <form className="forms_form">
+              <form className="forms_form" onSubmit={handleSubmitRegister}>
                 <fieldset className="forms_fieldset">
                   <div className="forms_field">
                     <input
                       type="text"
-                      placeholder="Nombre completo"
+                      placeholder="Nombre"
+                      className="forms_field-input"
+                      required
+                    />
+                  </div>
+                  <div className="forms_field">
+                    <input
+                      type="text"
+                      placeholder="Apellidos"
+                      className="forms_field-input"
+                      required
+                    />
+                  </div>
+                  <div className="forms_field">
+                    <input
+                      type="text"
+                      placeholder="Usuario/Nickname"
+                      className="forms_field-input"
+                      required
+                    />
+                  </div>
+                  <div className="forms_field">
+                    <input
+                      type="date"
+                      placeholder="Usuario/Nickname"
                       className="forms_field-input"
                       required
                     />
@@ -120,7 +159,9 @@ export default function LogIn() {
                 </div>
               </form>
             </div>
+            {/* ------------------------- FIN LOGOUT ------------------------- */}
           </div>
+          {/* ------------------------- FIN FORMULARIOS ------------------------- */}
         </div>
       </section>
     </>
