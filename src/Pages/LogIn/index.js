@@ -30,9 +30,6 @@ export default function LogIn() {
         rel="stylesheet"
       />
       <section className="user">
-        <Link to="/" >
-          <img src="https://img.icons8.com/metro/52/ffffff/back.png" alt="<" className="backArrow" />
-        </Link>
         <div className="user_options-container">
           <div className="user_options-text">
             <div className="user_options-unregistered">

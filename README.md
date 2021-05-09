@@ -7,11 +7,9 @@ Estudiante de segundo año de Desarrollo de Aplicaciones Web
 
 # PROGRAMAS UTILIZADOS
 Visual Studio Code
-XAMPP
 GitHub y GitHub Desktop
 
 # BIBLIOGRAFÍA
-
 https://www.faztweb.com/
 https://www.w3schools.com/
 https://www.php.net/docs.php

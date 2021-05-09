@@ -7,10 +7,6 @@
     color: black;
 }
 
-.opiniones {
-    filter: blur(10px);
-}
-
 form div label {
     padding-bottom: 10px;
     padding-top: 10px;
