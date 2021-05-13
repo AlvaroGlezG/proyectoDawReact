@@ -6,7 +6,8 @@
 // ╚══════╝░╚════╝░░╚═════╝░╚═╝╚═╝░░╚══╝
 
 import { useState } from 'react';
-import { Link } from 'wouter';
+
+import SiteBar from 'components/SideBar/sideBar';
 
 import "./style.css";
 
@@ -25,6 +26,7 @@ export default function LogIn() {
   import("./script")
   return (
     <>
+      <SiteBar menuState={false}/>
       <link
         href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500"
         rel="stylesheet"

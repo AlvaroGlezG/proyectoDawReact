@@ -26,18 +26,18 @@ export default function OpinionForm() {
                 </div>
                 {/* <!-- partial:index.partial.html --> */}
                 <h5><p>Votación final</p></h5>
-                <div class="main-container">
-                    <div class="inner-content">
+                <div className="main-container">
+                    <div className="inner-content">
                         <input type="radio" name="starRating" id="star1" />
-                        <label for="star1"><i class="fa fa-star-o"></i></label>
+                        <label htmlFor="star1"><i className="fa fa-star-o"></i></label>
                         <input type="radio" name="starRating" id="star2" />
-                        <label for="star2"><i class="fa fa-star-o"></i></label>
+                        <label htmlFor="star2"><i className="fa fa-star-o"></i></label>
                         <input type="radio" name="starRating" id="star3" />
-                        <label for="star3"><i class="fa fa-star-o"></i></label>
+                        <label htmlFor="star3"><i className="fa fa-star-o"></i></label>
                         <input type="radio" name="starRating" id="star4" />
-                        <label for="star4"><i class="fa fa-star-o"></i></label>
+                        <label htmlFor="star4"><i className="fa fa-star-o"></i></label>
                         <input type="radio" name="starRating" id="star5" />
-                        <label for="star5"><i class="fa fa-star-o"></i></label>
+                        <label htmlFor="star5"><i className="fa fa-star-o"></i></label>
                     </div>
                 </div>
                 {/* <!-- partial --> */}

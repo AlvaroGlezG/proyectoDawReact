@@ -9,5 +9,4 @@ export default async function GetFilm({ keyword = 'tt7286456'} = {}) {
             return resp;
         });
     return respApi;
-    // respApi.then(val => console.log(val));
 }

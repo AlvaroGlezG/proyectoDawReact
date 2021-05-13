@@ -32,6 +32,7 @@ a:hover {
     font: 14px/22px "Lato", Arial, sans-serif;
     color: #A9A8A3;
     height: 500px;
+
 }
 
 .container {
@@ -40,6 +41,7 @@ a:hover {
     /* background: #000000; */
     border-radius: 5px;
     position: relative;
+  
 }
 
 .hero {

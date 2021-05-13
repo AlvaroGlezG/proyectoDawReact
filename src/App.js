@@ -3,22 +3,22 @@ import { Route } from 'wouter';
 
 import './App.css';
 
-import Header from 'Pages/Header/index';
-import Form from 'Pages/Form/index';
+import HomePage from 'Pages/HomePage/index';
+import Films from 'Pages/Films/index';
+import Donations from 'Pages/Donations/index';
+import UserReviews from 'Pages/UserReviews/index';
+import Settings from 'Pages/Settings/index';
 import LogIn from 'Pages/LogIn/index';
-import SiteBar from 'components/SideBar/sideBar';
 
 function App() {
 
   return (
     <div className="App">
-      <SiteBar menuState={false}/>
-        <section className=".App-header">
-          <Route path="/" component={Header} />
-        </section>
-        <section className="form">
-          <Route path="/" component={Form} />
-        </section>
+        <Route path="/" component={HomePage} />
+        <Route path="/films" component={Films} />
+        <Route path="/donations" component={Donations} />
+        <Route path="/userReviews" component={UserReviews} />
+        <Route path="/settings" component={Settings} />
         <Route path="/login" component={LogIn} />
     </div>
   );

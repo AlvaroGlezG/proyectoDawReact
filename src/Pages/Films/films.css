@@ -1,0 +1,9 @@
+.title {
+	text-transform: uppercase;
+	background: linear-gradient(to right, #ffe172 0%, #fece00 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-size: 10vw;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+};
