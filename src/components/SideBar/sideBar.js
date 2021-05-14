@@ -25,7 +25,7 @@ import logoWhiteText from "img/logo/logo_white_large.png";
 import "react-pro-sidebar/dist/css/styles.css";
 import "./sideBar.css";
 
-export default function SiteBar(menuState) {
+export default function SideBar(menuState) {
 
     //create initial menuCollapse state using useState hook
     const [menuCollapse, setMenuCollapse] = useState(menuState)

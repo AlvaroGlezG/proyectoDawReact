@@ -1,8 +1,8 @@
-import SiteBar from 'components/SideBar/sideBar';
+import SideBar from 'components/SideBar/sideBar';
 
 export default function UserReviews(){
     return (<>
-      <SiteBar menuState={false}/>
+      <SideBar menuState={false}/>
 
     </>);
 }

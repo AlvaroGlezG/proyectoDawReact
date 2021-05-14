@@ -7,7 +7,7 @@
 
 import { useState } from 'react';
 
-import SiteBar from 'components/SideBar/sideBar';
+import SideBar from 'components/SideBar/sideBar';
 
 import "./style.css";
 
@@ -26,7 +26,7 @@ export default function LogIn() {
   import("./script")
   return (
     <>
-      <SiteBar menuState={false}/>
+      <SideBar menuState={false}/>
       <link
         href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500"
         rel="stylesheet"
