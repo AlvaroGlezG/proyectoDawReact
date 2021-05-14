@@ -8,6 +8,7 @@ Estudiante de segundo año de Desarrollo de Aplicaciones Web
 # PROGRAMAS UTILIZADOS
 Visual Studio Code
 GitHub y GitHub Desktop
+Vercel
 
 # BIBLIOGRAFÍA
 https://www.faztweb.com/

@@ -1,13 +1,6 @@
 import SideBar from 'components/SideBar/sideBar';
 
 import "./donations.css";
-{/* <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet"> 
-
-Dona mediante Paypara para apoyar el desarrollo del proyecto de Filmfy
-
-*/ }
 
 export default function Donations() {
 
