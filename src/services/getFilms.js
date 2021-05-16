@@ -1,6 +1,20 @@
 const apiKey = 'b5466b91';
 
-export default async function GetFilm({ keyword = 'tt7286456'} = {}) {
+// const fromApiResponseToPosters = apiResponse => {
+//     const { Search = [] } = apiResponse;
+
+//     if (Array.isArray(Search)) {
+//         const posters = Search.map(poster => {
+//             const { Poster, Title, imdbID } = poster;
+//             return { Poster, Title, imdbID };
+//         })
+//         return posters;
+//     }
+
+//     return [];
+// }
+
+export default async function GetFilm({ keyword = 'tt4154796'} = {}) {
     const apiURL = `https://www.omdbapi.com/?i=${keyword}&plot=full&apikey=${apiKey}`;
 
     const respApi = await fetch(apiURL)

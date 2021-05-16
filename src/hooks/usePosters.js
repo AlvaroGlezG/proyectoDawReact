@@ -9,17 +9,16 @@
 import { useEffect, useState } from 'react';
 import getFilm from 'services/getFilms';
 
-export function usePosters(){
+export function usePosters({ keyword } = {}){
     const [film, setFilm] = useState();
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         setLoading(true);
-        getFilm().then(film => {
+        getFilm({ keyword: keyword }).then(film => {
             setFilm(film);
             setLoading(false);
         });
     },[setFilm]);
-// console.log(film);
     return { film, loading };
 }

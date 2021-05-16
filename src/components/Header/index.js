@@ -18,11 +18,10 @@ import './movie_card.css';
 
 export default function Header(){
     const {film, loading} = usePosters();
-    
+
     if((loading) || (film === undefined)){
         return <Loading />;
     }else{
-        // console.log(film)
         return (<>
             <div className="movie-card">
                 <div className="container">
