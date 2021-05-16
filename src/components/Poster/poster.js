@@ -9,6 +9,6 @@
 export default function Poster({ poster } = {}){
 
     return (<>
-        <a href="/"><img alt="poster de la pelicula" src={poster} className="cover"></img></a>
+        <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c"><img alt="poster de la pelicula" src={poster} className="cover"></img></a>
     </>);
 }
