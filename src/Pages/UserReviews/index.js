@@ -5,7 +5,9 @@ import './userReviews.css';
 export default function UserReviews(){
     return (<>
       <SideBar menuState={false}/>
-
+    {/* <h1 className="title">Registrate para </h1>
+    <h1 className="title">ver todas tus</h1>
+    <h1 className="title">reseñas</h1> */}
       <div className="userCard">
             <div className="filmImage">
                 <img src={"https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"}></img>

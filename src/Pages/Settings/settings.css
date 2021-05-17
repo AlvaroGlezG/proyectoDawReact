@@ -1,0 +1,30 @@
+.container{
+    position: relative;
+}
+
+#userIcon{
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.userDetalles{
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    /* float: right; */
+    align-items: left;
+    top: 100px;
+    left: 25%;
+}
+
+.userDetalles p{
+    font-size: 17px;
+    color: white;
+}
+
+.userDetalles p:nth-child(2){
+    color: #FED113;
+    cursor: pointer;
+}
